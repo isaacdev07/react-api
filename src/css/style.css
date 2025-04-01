@@ -1,0 +1,84 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .search-container {
+    text-align: center;
+  }
+  
+  .search-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .search-container input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #282828;
+    border-radius: 50px;
+    background-color: #181818;
+    color: white;
+    outline: none;
+  }
+  
+  .search-container button {
+    background-color: #1db954;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: black;
+    font-weight: bold;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .search-container button:hover {
+    background-color: #1ed760;
+  }
+  
+  .music-card {
+    background-color: #181818;
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+  }
+  
+  .music-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .music-card h2 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .music-card p {
+    color: #b3b3b3;
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .music-card audio {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .no-preview {
+    color: red;
+    font-size: 14px;
+  }
+  

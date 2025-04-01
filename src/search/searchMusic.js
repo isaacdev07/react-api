@@ -1,37 +1,30 @@
-import React, { useState } from "react";
-import { searchTrack } from "../src/Spotify-service/spotifyService";
-
-import "../src/css/style.css"; // Importa os estilos
+import { useState } from "react";
+import { searchTrack } from "./spotifyService";
+import "./styles.css"; // Importa o CSS
 
 const MusicCard = ({ track }) => (
   <div className="music-card">
     <img src={track.album.images[0].url} alt={track.name} />
     <h2>{track.name}</h2>
-    <p>{track.artists.map((artist) => artist.name).join(", ")}</p>
-    {track.preview_url ? (
-      <audio controls>
-        <source src={track.preview_url} type="audio/mpeg" />
-        Seu navegador não suporta áudio.
-      </audio>
-    ) : (
-      <p className="no-preview">Prévia indisponível</p>
-    )}
+    <p>{track.artists.map(artist => artist.name).join(", ")}</p>
+    <audio controls>
+      <source src={track.preview_url} type="audio/mpeg" />
+      Seu navegador não suporta áudio.
+    </audio>
   </div>
 );
 
-const App = () => {
+const SearchMusic = () => {
   const [track, setTrack] = useState(null);
   const [query, setQuery] = useState("");
 
   const handleSearch = async () => {
-    if (query.trim() === "") return;
     const result = await searchTrack(query);
     setTrack(result);
   };
 
   return (
     <div className="search-container">
-      <h1>Spotify Senai</h1>
       <input
         type="text"
         placeholder="Digite o nome da música..."
@@ -44,4 +37,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default SearchMusic;
