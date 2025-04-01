@@ -81,4 +81,11 @@ body {
     color: red;
     font-size: 14px;
   }
+  .no-preview a {
+    color: white; /* Define a cor do texto como branco */
+    text-decoration: underline; /* Adiciona um sublinhado */
+  }
   
+  .no-preview a:hover {
+    color: #ddd; /* Muda a cor quando o link é hover (opcional, para efeito visual) */
+  }  
